@@ -77,10 +77,10 @@ def get_books_by_id(book_id: int):
 
     return JSONResponse(content={"status": "ok", "data": book_filter}, status_code=200)
     
-    class createBooksPayload(BaseModel):
-    id : str
-    name: str
-    page: int
+class createBooksPayload(BaseModel):
+        id : str
+        name: str
+        page: int
 
 
 @app.post("/books")
